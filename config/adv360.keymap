@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDCOMMA";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp COMMA>;
+            bindings = <&kp SPACE>, <&kp COMMA>, <&kp SPACE>;
 
             tapping-term-ms = <200>;
         };
