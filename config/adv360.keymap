@@ -33,13 +33,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDCOMMA";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp COMMA>, <&kp SPACE>;
+            bindings = <&kp SPACE>, <&kp COMMA>;
 
             tapping-term-ms = <200>;
         };
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        spacecomma {
+            bindings = <&spaceandcomma>;
+            key-positions = <70 56>;
+            layers = <0>;
+        };
     };
 
     keymap {
