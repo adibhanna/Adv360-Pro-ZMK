@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        comma_and_space: comma_and_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMA_AND_SPACE";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -33,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDCOMMA";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp COMMA>;
+            bindings = <&kp SPACE>, <&comma_and_space>;
 
             tapping-term-ms = <200>;
         };
@@ -42,15 +49,7 @@
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        spacecomma {
-            bindings = <&spaceandcomma>;
-            key-positions = <70 56>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
