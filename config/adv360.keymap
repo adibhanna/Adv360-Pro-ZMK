@@ -17,6 +17,14 @@
             bindings = <&kp RET>;
         };
 
+        comma_space: comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp COMMA &kp SPACE>;
+
+            label = "COMMA_SPACE";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -33,7 +41,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACEANDCOMMA";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp COMMA>;
+            bindings = <&kp SPACE>, <&comma_space>;
 
             tapping-term-ms = <200>;
         };
