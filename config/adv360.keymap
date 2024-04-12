@@ -35,7 +35,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp COMMA>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
         };
     };
 
